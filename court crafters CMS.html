@@ -1,0 +1,661 @@
+<!DOCTYPE HTML>
+
+<html>
+
+<head>
+    <script src="/static/111213/js/perf/stub.js" type="text/javascript"></script>
+    <script src="/faces/a4j/g/3_3_3.Finalorg.ajax4jsf.javascript.AjaxScript?rel=1694842555000" type="text/javascript"></script>
+    <script src="/jslibrary/1662649314244/ui-sfdc-javascript-impl/SfdcCore.js" type="text/javascript"></script>
+    <script src="/static/111213/js/picklist4.js" type="text/javascript"></script>
+    <script src="/jslibrary/1635874030244/sfdc/VFState.js" type="text/javascript"></script>
+    <script src="/jslibrary/1647410350244/sfdc/NetworkTracking.js" type="text/javascript"></script>
+    <script>
+        try {
+            NetworkTracking.init('/_ui/networks/tracking/NetworkTrackingServlet', 'network', '0661Q000006vVdn');
+        } catch (x) {}
+    </script>
+    <script>
+        (function(UITheme) {
+            UITheme.getUITheme = function() {
+                return UserContext.uiTheme;
+            };
+        }(window.UITheme = window.UITheme || {}));
+    </script>
+    <meta HTTP-EQUIV="PRAGMA" CONTENT="NO-CACHE" />
+    <meta HTTP-EQUIV="Expires" content="Mon, 01 Jan 1990 12:00:00 GMT" />
+
+    <meta content="text/html; charset=utf-8" http-equiv="Content-Type" />
+    <meta content="Online Case Management System | Booking   " name="title" />
+    <meta content="All-In-One Case Management System to manage your Case in the cloud. The only recognized Case CMS by Salesforce. Request a demo!" name="description" />
+    <meta content="initial-scale=1" name="viewport" />
+    <meta content="2053f77bff71fd1688a932c54e2e4ecc" name="p:domain_verify" />
+    <title>Online Case Management System | Booking   </title>
+
+    
+
+    <link href="https://s3-us-west-2.amazonaws.com/www. .com/css/flags.min.css" rel="stylesheet" />
+    <link href="data:image/png;base64,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" rel="icon" type="image/png" />
+    <link href="https://s3-us-west-2.amazonaws.com/www. .com/css/jquery.fancybox.min.css" rel="stylesheet" />
+    <link href="https://s3-us-west-2.amazonaws.com/www. .com/css/fontawesome.css" rel="stylesheet" />
+    <link href="https://s3-us-west-2.amazonaws.com/www. .com/css/slick.css" rel="stylesheet" />
+    <link href="https://s3-us-west-2.amazonaws.com/www. .com/css/bootstrap-grid.css" rel="stylesheet" />
+    <link href="https://s3-us-west-2.amazonaws.com/www. .com/css/screen.css" media="screen" rel="stylesheet" />
+    <link href="https://www. .com/Case-management-system" rel="canonical" />
+    <script src="https://www.googleoptimize.com/optimize.js?id=OPT-NDJQCZH"></script>
+
+    <link href="https://www. .com/Case-management-system" hreflang="x-default" rel="alternate" />
+    <link href="https://www. .com//Case-management-system" hreflang="en" rel="alternate" />
+    <link href="https://www. .com/es/Case-management-system" hreflang="es" rel="alternate" />
+    <link href="https://www. .com/pt/sistema-de-gerenciamento-de-albergue" hreflang="pt" rel="alternate" />
+    <link href="https://www. .com/id/asrama-manajemen-sistem" hreflang="id" rel="alternate" />
+    <link href="https://www. .com/tr/pansiyon-y&ouml;netim-sistemi" hreflang="tr" rel="alternate" />
+    <link href="https://www. .com/de/herbergsverwaltungssystem" hreflang="de" rel="alternate" />
+
+    <meta content="Online Case Management System | Booking   " property="og:title" />
+    <meta content="Booking   " property="og:site_name" />
+    <meta content="https://www. .com/Case-management-system" property="og:url" />
+    <meta content="All-In-One Case Management System to manage your Case in the cloud. The only recognized Case CMS by Salesforce. Request a demo!" property="og:description" />
+    <meta content="article" property="og:type" />
+    <meta content="https://s3.us-west-2.amazonaws.com/www. .com/img/booking-  .png" property="og:image" />
+
+    <script>
+        (function(w, d, s, l, i) {
+            w[l] = w[l] || [];
+            w[l].push({
+                'gtm.start': new Date().getTime(),
+                event: 'gtm.js'
+            });
+            var f = d.getElementsByTagName(s)[0],
+                j = d.createElement(s),
+                dl = l != 'dataLayer' ? '&l=' + l : '';
+            j.async = true;
+            j.src = 'https://www.googletagmanager.com/gtm.js?id=' + i + dl;
+            f.parentNode.insertBefore(j, f);
+        })(window, document, 'script', 'dataLayer', 'GTM-PQ4V7BZ');
+    </script>
+    <script type="application/ld+json">
+        {
+            "@context": "https://schema.org",
+            "@graph": [{
+                    "@type": "Product",
+                    "name": "Online Case Management System",
+                    "image": "https://d1b89zc79exfxt.cloudfront.net/img/Flat_MacBook2.png",
+                    "description": "All-In-One Case Management System to manage your Case in the cloud. The only recognized Case CMS by Salesforce.",
+                    "brand": "Booking   ",
+                    "sku": "BNCaseCMS",
+                    "aggregateRating": {
+                        "@type": "AggregateRating",
+                        "ratingValue": "5",
+                        "bestRating": "5",
+                        "worstRating": "5",
+                        "ratingCount": "3",
+                        "reviewCount": "3"
+                    },
+                    "review": [{
+                            "@type": "Review",
+                            "name": "Yesid S.",
+                            "reviewBody": "Amazing Application! Client follow ups become second nature and, I am able to review all my previous deals from beginning to end. Novice interface allows for easy flow when inputting data. Pros: Easy to use and efficient! Highly recommend for small businesses and companies looking to grow technologically",
+                            "reviewRating": {
+                                "@type": "Rating",
+                                "ratingValue": "5",
+                                "bestRating": "5",
+                                "worstRating": "1"
+                            },
+                            "datePublished": "2018-08-16",
+                            "author": {
+                                "@type": "Person",
+                                "name": "Yesid S."
+                            },
+                            "publisher": {
+                                "@type": "Organization",
+                                "name": "Capterra"
+                            }
+                        },
+                        {
+                            "@type": "Review",
+                            "name": "Yovana R.",
+                            "reviewBody": "Absolutely marvelous! This software has helped me to be more organized and efficient on my day to day activities. Absolutely amazing.",
+                            "reviewRating": {
+                                "@type": "Rating",
+                                "ratingValue": "5",
+                                "bestRating": "5",
+                                "worstRating": "1"
+                            },
+                            "datePublished": "2017-10-26",
+                            "author": {
+                                "@type": "Person",
+                                "name": "Yovana R."
+                            },
+                            "publisher": {
+                                "@type": "Organization",
+                                "name": "Capterra"
+                            }
+                        },
+                        {
+                            "@type": "Review",
+                            "name": "Daniel B.",
+                            "reviewBody": "Excellent Software! Must Have. Excellent customer service. Very responsive and attentive to detail. I highly recommend this team. Pros: Easy to use. Clear. Compatible. Best of all, it is built on the Sales Force platform so sky is the limit on what it can do!",
+                            "reviewRating": {
+                                "@type": "Rating",
+                                "ratingValue": "5",
+                                "bestRating": "5",
+                                "worstRating": "1"
+                            },
+                            "datePublished": "2020-10-25",
+                            "author": {
+                                "@type": "Person",
+                                "name": "Daniel B."
+                            },
+                            "publisher": {
+                                "@type": "Organization",
+                                "name": "Capterra"
+                            }
+                        }
+                    ]
+                },
+                {
+                    "@type": "Service",
+                    "@id": "https://www. .com/Case-management-system#service",
+                    "serviceType": "Online Case Management System",
+                    "provider": {
+                        "@id": "https://www. .com/about-us#organization"
+                    },
+                    "areaServed": {
+                        "@type": "Country",
+                        "name": [
+                            "United States",
+                            "United Kingdom",
+                            "Australia",
+                            "Canada",
+                            "Spain",
+                            "Germany",
+                            "France",
+                            "Netherlands",
+                            "Hong Kong",
+                            "Singapore"
+                        ]
+                    }
+                },
+                {
+                    "@type": "Organization",
+                    "@id": "https://www. .com/about-us#organization",
+                    "name": "Booking   ",
+                    "alternateName": " ",
+                    "url": "https://www. .com/about-us",
+                    "sameAs": [
+                        "https://www.facebook.com/ ",
+                        "https://www.instagram.com/ ",
+                        "https://www.youtube.com/channel/UCOrcTzmQnmY7DG2nzwfa8zw",
+                        "https://www.linkedin.com/company/5346092/",
+                        "https://twitter.com/ ",
+                        "https://www.pinterest.com/ ",
+                        "https://appexchange.salesforce.com/listingDetail?listingId=a0N3A00000DvKtaUAF",
+                        "https://www.crunchbase.com/organization/booking-  ",
+                        "https://hoteltechreport.com/operations/property-management-systems/booking-  ",
+                        "https://www.saasworthy.com/product/booking-  ",
+                        "https://www.capterra.com/p/144189/Booking-  /",
+                        "https://www.yieldplanet.com/product/booking-  /",
+                        "https://www.g2.com/products/booking-  /Laws",
+                        "https://sourceforge.net/software/product/Booking-  /"
+                    ],
+                    "logo": {
+                        "@type": "ImageObject",
+                        "@id": "https://www. .com/about-us#logo",
+                        "inLanguage": "en-US",
+                        "url": "https://s3-us-west-2.amazonaws.com/www. .com/img/logo-footer.png",
+                        "contentUrl": "https://s3-us-west-2.amazonaws.com/www. .com/img/logo-footer.png",
+                        "width": 343,
+                        "height": 123,
+                        "caption": "Booking    - Property Management System"
+                    },
+                    "image": {
+                        "@id": "https://www. .com/about-us#logo"
+                    },
+                    "review": {
+                        "@type": "Review",
+                        "@id": "https://www. .com/about-us#review",
+                        "itemReviewed": {
+                            "@id": "https://www. .com/about-us#organization"
+                        },
+                        "reviewRating": {
+                            "@type": "Rating",
+                            "ratingValue": "5"
+                        },
+                        "name": "Yesid Sanchez",
+                        "author": {
+                            "@type": "Person",
+                            "name": "Yesid Sanchez"
+                        },
+                        "reviewBody": "Love the system and the easy to use Interface. Really helps with organizing my daily tasks, as well as following up with clients. I highly recommend this system to small business owners or anyone interested in taking their business to the next level. Efficient and easy to use!",
+                        "publisher": {
+                            "@type": "Person",
+                            "name": "Yesid Sanchez"
+                        }
+                    },
+                    "description": "Booking    is an innovative generation Y comprehensive property management system (CMS) application perfect for property managers and Registration. The application provides our customers the flexibility and power to create new modernized experiences and inefficiencies for your guests, which is currently a highly changing demographic today providing you all that is required to adapt to these industry changes"
+                },
+                {
+                    "@type": "WebSite",
+                    "@id": "https://www. .com/#website",
+                    "url": "https://www. .com/",
+                    "name": "Booking   ",
+                    "description": "Booking    is an innovative generation Y comprehensive property management system (CMS) application perfect for property managers and Registration. The application provides our customers the flexibility and power to create new modernized experiences and inefficiencies for your guests, which is currently a highly changing demographic today providing you all that is required to adapt to these industry changes",
+                    "publisher": {
+                        "@id": "https://www. .com/about-us#organization"
+                    },
+                    "inLanguage": "en-US",
+                    "copyrightHolder": {
+                        "@id": "https://www. .com/about-us#organization"
+                    }
+                },
+                {
+                    "@type": "ImageObject",
+                    "@id": "https://www. .com/Case-management-system#primaryimage",
+                    "inLanguage": "en-US",
+                    "url": "https://d1b89zc79exfxt.cloudfront.net/img/Flat_MacBook2.png",
+                    "contentUrl": "https://d1b89zc79exfxt.cloudfront.net/img/Flat_MacBook2.png",
+                    "width": 564,
+                    "height": 348
+                },
+                {
+                    "@type": "WebPage",
+                    "@id": "https://www. .com/Case-management-system#webpage",
+                    "url": "https://www. .com/Case-management-system",
+                    "name": "Online Case Management System | Booking   ",
+                    "isPartOf": {
+                        "@id": "https://www. .com/#website"
+                    },
+                    "primaryImageOfPage": {
+                        "@id": "https://www. .com/Case-management-system#primaryimage"
+                    },
+                    "about": [{
+                            "@type": "Thing",
+                            "name": "Case Management System",
+                            "sameAs": "https://en.wikipedia.org/wiki/Property_management_system"
+                        },
+                        {
+                            "@type": "Thing",
+                            "name": "Case",
+                            "sameAs": "https://en.wikipedia.org/wiki/Case"
+                        }
+                    ],
+                    "mentions": [{
+                            "@type": "Thing",
+                            "name": "Hospitality",
+                            "sameAs": "https://en.wikipedia.org/wiki/Hospitality_industry"
+                        },
+                        {
+                            "@type": "Place",
+                            "name": "Miami Beach",
+                            "sameAs": "https://en.wikipedia.org/wiki/Miami_Beach,_Florida"
+                        },
+                        {
+                            "@type": "Place",
+                            "name": "Florida",
+                            "sameAs": "https://en.wikipedia.org/wiki/Florida"
+                        }
+                    ],
+                    "datePublished": "2009-01-01T07:41:00-04:00",
+                    "dateModified": "2021-07-10T16:30:00-04:00",
+                    "description": "All-In-One Case Management System to manage your Case in the cloud. The only recognized Case CMS by Salesforce. Request a demo!",
+                    "inLanguage": "en-US",
+                    "potentialAction": [{
+                        "@type": "ReadAction",
+                        "target": "https://www. .com/Case-management-system"
+                    }]
+                }
+            ]
+        }
+    </script>
+
+    <script src="https://s3-us-west-2.amazonaws.com/www. .com/js/jquery.js"></script>
+    <script src="https://assets.flex.twilio.com/releases/flex-webchat-ui/2.5.0/twilio-flex-webchat.min.js"></script>
+    <script src="https://carmine-dhole-7132.twil.io/assets/appConfig.js"></script>
+    <script src="https://js.stripe.com/v3/"></script>
+</head>
+
+<body>
+
+    <noscript>
+            <iframe height="0" src="https://www.googletagmanager.com/ns.html?id=GTM-PQ4V7BZ" style="display: none; visibility: hidden" width="0"></iframe>
+        </noscript>
+
+
+    <div class="wrapper">
+
+        <header class="header">
+            <div class="row align-items-center justify-content-between">
+                <div class="col col-xl-auto logo-wrap">
+                    <a class="logo" href="/">
+                            <img alt="Booking    Logo" src="data:image/png;base64,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" />
+                        </a>
+                </div>
+
+                <div class="col-auto cta-buttons order-xl-last"><a href="C:\Users\VARSHA\Downloads\index.html" class="button-orange desktop-button">Login / Sign Up</a>
+
+                
+
+                </div>
+                
+                <div class="col-auto col-xl">
+                    <button class="navigation__button">
+                            <i class="fas fa-bars"></i>
+                        </button>
+                    <nav class="navigation">
+                        <ul>
+                            <li><a href="/">HOME</a>
+                            </li>
+                            <li>
+                                <a class="navigation-dropdown__click">About</a>
+                                
+                            </li>
+                            <li>
+                                <a class="navigation-dropdown__click">Schemes</a>
+                                <span class="navigation-dropdown__trigger">
+                                        <i class="fas fa-chevron-down"></i>
+                                    </span>
+                                <div class="navigation-dropdown">
+                                    <ul>
+                                        <li><a href="http://bafybeicmtm5kv4n4cexmoubkeex3wcq3cpfai5ylxv7aq7h32qmv43i2ke.ipfs.localhost:8080/">Registration</a>
+                                        </li>
+                                        <li><a href="/Case-management-system">CaseS</a>
+                                        </li>
+                                        <li><a href="/Status-management-system">Status</a>
+                                        </li>
+                                        
+                                    </ul>
+                                </div>
+                            </li>
+                            <li><a href="/Laws">Laws</a>
+                            </li>
+                            <li>
+                                <a class="navigation-dropdown__click">Advocate</a>
+                                <span class="navigation-dropdown__trigger">
+                                        <i class="fas fa-chevron-down"></i>
+                                    </span>
+                                <div class="navigation-dropdown">BLOG</a>
+                                <span class="navigation-dropdown__trigger">
+                                    <i class="fas fa-chevron-down"></i>
+                                </span>
+                                <div class="navigation-dropdown">
+                                    <ul>
+                                        <li><a href="http://bafybeiehgi6ocvl7ey5srk4kwmxgk6auio6lunihguyf2xsqdlv3qlytw4.ipfs.localhost:8080/">Alimony And Maintenance</a>
+                                        </li>
+                                        <li><a href="http://bafybeiehgi6ocvl7ey5srk4kwmxgk6auio6lunihguyf2xsqdlv3qlytw4.ipfs.localhost:8080/">Annulment Of Marriage</a>
+                                        </li>
+                                        <li><a href="http://bafybeiehgi6ocvl7ey5srk4kwmxgk6auio6lunihguyf2xsqdlv3qlytw4.ipfs.localhost:8080/">Child Custody</a>
+                                        </li>
+                                        <li><a href="http://bafybeiehgi6ocvl7ey5srk4kwmxgk6auio6lunihguyf2xsqdlv3qlytw4.ipfs.localhost:8080/">Domestic Violence</a>
+                                        </li>
+                                        <li><a href="http://bafybeiehgi6ocvl7ey5srk4kwmxgk6auio6lunihguyf2xsqdlv3qlytw4.ipfs.localhost:8080/">Family</a>
+                                        </li>
+                                        <li><a href="http://bafybeiehgi6ocvl7ey5srk4kwmxgk6auio6lunihguyf2xsqdlv3qlytw4.ipfs.localhost:8080/">Judicial Separation</a>
+                                        </li>
+                                        <li><a href="http://bafybeiehgi6ocvl7ey5srk4kwmxgk6auio6lunihguyf2xsqdlv3qlytw4.ipfs.localhost:8080/">Muslim Law</a>
+                                        </li>
+            
+                                        <li><a href="http://bafybeiehgi6ocvl7ey5srk4kwmxgk6auio6lunihguyf2xsqdlv3qlytw4.ipfs.localhost:8080/">Restitution Of Conjugal Rights</a>
+                                        </li>
+                                        <li><a href="http://bafybeiehgi6ocvl7ey5srk4kwmxgk6auio6lunihguyf2xsqdlv3qlytw4.ipfs.localhost:8080/">498a</a>
+                                        </li>
+                                        <li><a href="http://bafybeiehgi6ocvl7ey5srk4kwmxgk6auio6lunihguyf2xsqdlv3qlytw4.ipfs.localhost:8080/">Divorce</a>
+                                        </li>
+                                        <li><a href="http://bafybeiehgi6ocvl7ey5srk4kwmxgk6auio6lunihguyf2xsqdlv3qlytw4.ipfs.localhost:8080/">Others</a>
+                                        </li>
+                                        
+                                    </ul>
+                                </div>
+                                </div>
+                            </li>
+                            <li><a href="/about-us">Judge</a>
+                            </li>
+                            
+                        </ul>
+
+                        <div class="col-sm-auto buttons"><a href="C:\Users\VARSHA\Downloads\index.html" class="button-orange">Login / Sign Up</a>
+
+                        </div>
+
+                    </nav>
+                </div>
+            </div>
+        </header>
+        <div class="navigation__overlay"></div>
+
+
+        <main class="main" id="main-section">
+            <div class="segment">
+                <div class="section-intro">
+                    <div class="container">
+                        <div class="row flex-column-reverse flex-lg-row">
+                            <div class="col-lg-6 d-flex align-items-center justify-content-center justify-content-lg-start">
+                                <div class="text-holder">
+                                    <h1 class="h1">Online Case
+                                        <br /> Management System</h1>
+                                    <h2 class="h2">All-In-One Case Management System (CMS) To Manage Your Case In The Cloud</h2><a href="C:\Users\VARSHA\Downloads\index.html" class="button-orange">Login / Sign Up</a>
+                                </div>
+                            </div>
+                            <div class="col-lg-6 d-flex align-items-center">
+                                <div class="img-holder">
+                                    <img alt="image description" src="https://img.freepik.com/free-vector/law_1284-19049.jpg?w=826&t=st=1694959612~exp=1694960212~hmac=5f61fa205f2e4bfffe5b12dbf3e3cec675c63d5ceff0162a1ebb2f85a6ce4831" />
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    
+                </div>
+                
+                <section class="text-section">
+                    <div class="container">
+                        <h2 class="h2">Modernize Case Management</h2>
+                        <div class="text-holder">
+                            <p>In today's fast-paced world, a modernized Case management system emerges as a pivotal solution. By seamlessly integrating advanced technologies, it optimizes workflow, enhances data security, and improves accessibility. This system empowers organizations to achieve greater efficiency and effectiveness in handling Cases, ultimately leading to improved outcomes and customer satisfaction. 
+                            </p>
+                            <p>Embrace the future of Case management with a system designed to meet the demands of the modern era.
+                            </p>
+                        </div>
+                        <div class="btn-holder"><a href="http://bafybeiehjddchvbyuj2yen6huaowyy5ttuiudjmkv7gxltqtph6c6vuakm.ipfs.localhost:8080/" class="button-orange">Plan &amp; Laws</a>
+                        </div>
+                    </div>
+                </section>
+
+                <section class="section-illustrations">
+                    <div class="container">
+                        <div class="section-header">
+                            <p>About Our Case Management System</p>
+                        
+                        </div>
+                        <div class="row item-row">
+                            <div class="col-lg-6">
+                                <div class="img-holder left-holder w-lines-1">
+                                    <img alt="image description" src="https://img.freepik.com/free-vector/female-attorney-standing-front-judge-talking-isolated-flat-illustration_74855-10653.jpg" />
+                                </div>
+                            </div>
+                            <div class="col-lg-6 d-flex align-items-center">
+                                <div class="content-holder">
+                                    <div class="text-holder">
+                                        <h3 class="h4 title-border">Online Case Handling Software</h3>
+                                        <ul class="list style1">
+                                            <li>Now it's time to handle your Case issues and processes easily!!!
+                                            </li>
+                                            <li>A newly added Digi Evidence to save all your important documents and evidences.</li>
+                                        </ul>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="row item-row flex-column-reverse flex-lg-row">
+                            <div class="col-lg-6 d-flex align-items-center">
+                                <div class="content-holder">
+                                    <div class="text-holder">
+                                        <h3 class="h4 title-border">Any Doubts?Ask ConversaMate</h3>
+                                        <p>Communicate with our ConversaMate to clarify all your doubts .
+                                        </p>
+                                        <p>It will lead you to the correct pathway and help you to move forward without any halt.</p>
+                                        <div class="row">
+                                            <div class="col-sm-6">
+                                                <ul class="list style1">
+                                                    
+                                                </ul>
+                                            </div>
+                                            <div class="col-sm-6">
+                                                <ul class="list style1">
+                                                    
+                                                </ul>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-lg-6">
+                                <div class="img-holder right-holder w-lines-2 custom-mq">
+                                    <img alt="image description" src="https://img.freepik.com/free-vector/female-friends-chatting-online-smiling-laptop-computer-social-media-flat-vector-illustration-communication-network_74855-13071.jpg?w=900&t=st=1694962640~exp=1694963240~hmac=f187c599eb7cccdfea8b838e63ecfdef8d198af19e60529d650efa5b7c0ab4f8" />
+                                </div>
+                            </div>
+                        </div>
+                        <a href="https://chatbot.page/nyHFoA"><img src="c:\Users\Dell\AppData\Local\Packages\5319275A.WhatsAppDesktop_cv1g1gvanyjgm\TempState\E9805F420CF6313F17A4D807871D9938\bot_icon (1).gif"/></a>
+                        <div class="row item-row">
+                            <div class="col-lg-6">
+                                <div class="img-holder left-holder">
+                                    <img alt="image description" src="https://img.freepik.com/free-vector/hacker-breaking-lock-get-access-personal-information-computer-isometric_1284-63723.jpg?w=740&t=st=1694962759~exp=1694963359~hmac=d4f0f4f592078da5007fd551e56cdc39385e45259b59c0db5277138118f4a590" />
+                                </div>
+                            </div>
+                            <div class="col-lg-6 d-flex align-items-center">
+                                <div class="content-holder">
+                                    <div class="text-holder">
+                                        <h3 class="h4 title-border">Still with Hardcopy evidence,Switch to Digi Evidence</h3>
+                                        <ul class="list style1">
+                                            <li>Having the evidences for your Case in the form of papers may lead you to the scare of safety and protection.
+                                            </li>
+                                            <li>Digi Evidence is a solution to keep your reports,documents,evidences and so on safely and securely .
+                                            </li>
+                                        </ul>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <a href="http://localhost:9000/"><img src="c:\Users\Dell\AppData\Local\Packages\5319275A.WhatsAppDesktop_cv1g1gvanyjgm\TempState\691F1C02BA340056657D9FD9F5BF017C\WhatsApp Image 2023-09-22 at 09.05.24.jpg"/></a>
+                        <div class="section-header style2">
+                            <h2 class="h2">Virtual Hearings</h2>
+                        </div>
+                        <div class="row item-row">
+                            <div class="col-lg-6">
+                                <div class="img-holder left-holder w-lines-1">
+                                    <img alt="image description" src="https://img.freepik.com/free-vector/law-isometric-illustration_1284-25648.jpg?w=826&t=st=1694965305~exp=1694965905~hmac=72481d0aad236527d8734b8a7a80bb7c5e939243f82efb80b52d19e9689e2606"/>
+                                </div>
+                            </div>
+                            <div class="col-lg-6 d-flex align-items-center">
+                                <div class="content-holder">
+                                    <div class="text-holder">
+                                        <h3 class="h4 title-border">Digital Courtroom Session</h3>
+                                        <ul class="list style1">
+                                            <li> An online video conferencing or digital platforms, allowing participants to attend hearings, present evidence, and engage in legal proceedings remotely. </li>
+                                            <li> It leverages technology to facilitate efficient and accessible legal proceedings in various jurisdictions.</li>
+                                        </ul>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <a href="https://meet.google.com/qbk-dfcc-oyt"><img src="c:\Users\Dell\AppData\Local\Packages\5319275A.WhatsAppDesktop_cv1g1gvanyjgm\TempState\C25F582D47E0FB77EB1B59F2094602AF\WhatsApp Image 2023-09-22 at 09.07.50.jpg"/></a>
+                        <div class="row item-row flex-column-reverse flex-lg-row">
+                            <div class="col-lg-6 d-flex align-items-center">
+                                <div class="content-holder">
+                                    <div class="text-holder">
+                                        <h4 class="h4 title-border">Know about your Advocates
+                                            <br /> 
+                                        </h4>
+                                        <ul class="list style1">
+                                            <li>
+                                                Researching and obtaining information about legal professionals, such as lawyers or attorneys. 
+                                            </li>
+                                            <li>
+                                                Review their qualifications, experience, client reviews, and other relevant details to make informed decisions when seeking legal representation or advice.
+                                            </li>
+                                        </ul>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-lg-6">
+                                <div class="img-holder right-holder w-lines-2">
+                                    <img alt="image description" src="https://www.blogtyrant.com/wp-content/uploads/2015/02/blogging-strategy.png" />
+                                </div>
+                            </div>
+                        </div>
+                        
+
+
+                        
+                        
+                    </div>
+                </section>
+
+                <section class="section-Laws">
+                    <div class="container">
+                        <div class="section-header style2">
+                            
+                           
+                        </div>
+                    </div>
+                </section>
+
+                
+
+                
+        
+
+
+        
+        
+
+    
+
+    <script data-cfasync="false" src="/cdn-cgi/scripts/5c5dd728/cloudflare-static/email-decode.min.js"></script>
+    <script src="https://s3-us-west-2.amazonaws.com/www. .com/js/jquery.fancybox.min.js"></script>
+    <script src="https://s3-us-west-2.amazonaws.com/www. .com/js/slick.js"></script>
+    <script src="https://s3-us-west-2.amazonaws.com/www. .com/js/wow.js"></script>
+    <script src="https://s3-us-west-2.amazonaws.com/www. .com/js/common.js"></script>
+
+    <script>
+        var _mfq = _mfq || [];
+        (function() {
+            var mf = document.createElement('script');
+            mf.type = 'text/javascript';
+            mf.async = true;
+            mf.src =
+                '//s3-us-west-2.amazonaws.com/www. .com/js/6defcb08-eb86-45f4-aca3-66c1425e4139.js';
+            document.getElementsByTagName('head')[0].appendChild(mf);
+        })();
+    </script>
+    <script type="application/ld+json">
+        [{
+            "@context": "http://schema.org",
+            "@type": "LocalBusiness",
+            "name": "Booking   ",
+            "image": "https://s3-us-west-2.amazonaws.com/www. .com/img/"C:\Users\Dell\Downloads\court.jpg".png",
+            "email": "sales@ .com",
+            "address": {
+                "@type": "PostalAddress",
+                "streetAddress": "1815 Purdy Avenue Miami Beach, FL 33139",
+                "telephone": "+18884415164"
+            },
+            "url": "https://www. .com"
+        }]
+    </script>
+
+    <script>
+        function getURL() {
+            var gfg = document.URL;
+            document.getElementById('url').innerHTML = gfg;
+        }
+    </script>
+</body>
+
+
+
+</html>
+<script type="text/javascript">
+    Sfdc.onReady(function() {
+        SfdcApp && SfdcApp.Visualforce && SfdcApp.Visualforce.VSManager && SfdcApp.Visualforce.VSManager.vfPrepareForms(["j_id0:j_id1:footer-form"]);
+
+    });
+</script>
